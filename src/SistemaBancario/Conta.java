@@ -5,7 +5,7 @@ package SistemaBancario;
  *
  * @author Tatiane Paz
  */
-public class Conta {
+public abstract class Conta {
 
     protected double saldo;
     public int conta;
@@ -23,5 +23,8 @@ public class Conta {
     public void verSaldo(){
         System.out.println("Saldo= "+this.saldo);
     }
+    
+    //Método abstrato
+    protected abstract void juro();
     
 }

@@ -5,15 +5,17 @@ package SistemaBancario;
  *
  * @author Tatiane Paz
  */
-public class ContaCorrente extends Conta{
+public final class ContaCorrente extends Conta{
     
-    //overrding
+    //Rescreve o método da classe pai
+    @Override
      public void sacar(double valor){
         super.sacar(valor);
         this.juro();
     }
      
-    private void juro(){
+    @Override
+    protected void juro(){
         this.saldo -= 1;
     }
 }

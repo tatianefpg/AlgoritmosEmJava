@@ -5,14 +5,15 @@ package SistemaBancario;
  *
  * @author Tatiane Paz
  */
-public class ContaPoupanca extends Conta{    
+public final class ContaPoupanca extends Conta{    
     
     public void depositar(double valor){
         super.depositar(valor);
         this.juro();
     }
     
-    private void juro(){
+    @Override
+    protected void juro(){
         this.saldo += 1;
     }
 }
